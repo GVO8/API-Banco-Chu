@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BMPTec.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f3ffc171b16f7809a9ee52eac8a1655a51fe3a48")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8c4ce08b4a2fd13490e89d8da3c88ed040477968")]
 [assembly: System.Reflection.AssemblyProductAttribute("BMPTec.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BMPTec.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

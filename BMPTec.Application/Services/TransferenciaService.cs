@@ -190,7 +190,7 @@ namespace BMPTec.Application.Services
                     if (feriadosApi != null)
                     {
                         _feriadosCache.Clear();
-                        _feriadosCache.AddRange(feriadosApi.Select(f => f.Data));
+                        _feriadosCache.AddRange(feriadosApi.Select(f => f.date));
                         _ultimaAtualizacaoFeriados = DateTime.Now;
                         
                         _logger.LogInformation("Carregados {Quantidade} feriados para o ano {Ano}", _feriadosCache.Count, ano);
@@ -217,9 +217,9 @@ namespace BMPTec.Application.Services
         /// </summary>
         private class FeriadoApiResponse
         {
-            public DateTime Data { get; set; }
-            public string Nome { get; set; } = string.Empty;
-            public string Tipo { get; set; } = string.Empty;
+            public DateTime date { get; set; }
+            public string name { get; set; } = string.Empty;
+            public string type { get; set; } = string.Empty;
         }
 
         // Método adicional para forçar atualização do cache de feriados (útil para testes)
@@ -246,9 +246,9 @@ namespace BMPTec.Application.Services
 
                     return feriadosApi?.Select(f => new FeriadoInfoResponse
                     {
-                        Data = f.Data,
-                        Nome = f.Nome,
-                        Tipo = f.Tipo
+                        Data = f.date,
+                        Nome = f.name,
+                        Tipo = f.type
                     }).ToList() ?? new List<FeriadoInfoResponse>();
                 }
             }

@@ -20,3 +20,15 @@ System.ArgumentNullException: Value cannot be null. (Parameter 'contaDestino')
    at BMPTec.Application.Services.TransferenciaService.TransferirSaldoAsync(TransferenciaSaldoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Application\Services\TransferenciaService.cs:line 72
    at BMPTec.API.Controllers.v1.TransferenciaController.TransferirSaldoAsync(TransferenciaSaldoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Api\Controllers\TransferenciaController.cs:line 40
 2025-12-30 09:31:54.469 -03:00 [INF] Starting BMPTec API...
+2025-12-30 09:31:59.661 -03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-12-30 09:31:59.816 -03:00 [WRN] No store type was specified for the decimal property 'Saldo' on entity type 'Conta'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-30 09:31:59.822 -03:00 [WRN] No store type was specified for the decimal property 'Taxa' on entity type 'Transferencia'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-30 09:31:59.823 -03:00 [WRN] No store type was specified for the decimal property 'Valor' on entity type 'Transferencia'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-30 09:32:02.476 -03:00 [INF] BMPTec API started successfully
+2025-12-30 09:32:19.264 -03:00 [WRN] Failed to determine the https port for redirect.
+2025-12-30 09:32:24.544 -03:00 [INF] Iniciando transferência da conta de id "2aeecc2d-aa39-4537-d4f8-08de47936718" para conta de id "e9e1fa2f-cf86-4be1-d4f7-08de47936718"
+2025-12-30 09:32:26.895 -03:00 [INF] Buscando feriados nacionais para o ano 2025
+2025-12-30 09:32:27.541 -03:00 [INF] Carregados 13 feriados para o ano 2025
+2025-12-30 09:33:11.473 -03:00 [INF] Transferência realizada com sucesso: "a95ee0cb-5272-4b3b-8f1e-08de479f9726"
+2025-12-30 09:36:30.588 -03:00 [INF] Iniciando transferência da conta de id "2aeecc2d-aa39-4537-d4f8-08de47936718" para conta de id "e9e1fa2f-cf86-4be1-d4f7-08de47936718"
+2025-12-30 09:37:05.994 -03:00 [INF] Buscando feriados nacionais para o ano 2025
