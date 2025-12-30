@@ -553,6 +553,25 @@
           }
         }
       },
+      "Microsoft.Extensions.Http/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Logging/6.0.0": {
         "type": "package",
         "dependencies": {
@@ -863,19 +882,6 @@
         "runtime": {
           "lib/netstandard2.0/Polly.dll": {
             "related": ".pdb;.xml"
-          }
-        }
-      },
-      "RestSharp/108.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/net6.0/RestSharp.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/RestSharp.dll": {
-            "related": ".xml"
           }
         }
       },
@@ -1468,6 +1474,7 @@
           "BMPTec.Domain": "1.0.0",
           "FluentValidation": "11.9.0",
           "MediatR": "11.1.0",
+          "Microsoft.Extensions.Http": "6.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "6.0.4"
         },
         "compile": {
@@ -1497,7 +1504,6 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.30",
           "Microsoft.Extensions.Caching.StackExchangeRedis": "6.0.30",
           "Polly": "7.2.3",
-          "RestSharp": "108.0.3",
           "Serilog": "2.12.0",
           "StackExchange.Redis": "2.7.33"
         },
@@ -2395,6 +2401,25 @@
         "microsoft.extensions.hosting.abstractions.nuspec"
       ]
     },
+    "Microsoft.Extensions.Http/6.0.0": {
+      "sha512": "15+pa2G0bAMHbHewaQIdr/y6ag2H3yh4rd9hTXavtWDzQBkvpe2RMqFg8BxDpcQWssmjmBApGPcw93QRz6YcMg==",
+      "type": "package",
+      "path": "microsoft.extensions.http/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.Extensions.Http.dll",
+        "lib/net461/Microsoft.Extensions.Http.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Http.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Http.xml",
+        "microsoft.extensions.http.6.0.0.nupkg.sha512",
+        "microsoft.extensions.http.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "Microsoft.Extensions.Logging/6.0.0": {
       "sha512": "eIbyj40QDg1NDz0HBW0S5f3wrLVnKWnDJ/JtZ+yJDFnDj90VoPuoPmFkeaXrtu+0cKm5GRAwoDf+dBWXK0TUdg==",
       "type": "package",
@@ -2883,24 +2908,6 @@
         "lib/netstandard2.0/Polly.xml",
         "polly.7.2.3.nupkg.sha512",
         "polly.nuspec"
-      ]
-    },
-    "RestSharp/108.0.3": {
-      "sha512": "phq1AkVhqVXHZxvWDV4fJEJKCR5OHNFUGx2Ix8o5EFShS6654oZhth4X2RWvaU/W7UexIswW0T+lTirxfLU2Ow==",
-      "type": "package",
-      "path": "restsharp/108.0.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net5.0/RestSharp.dll",
-        "lib/net5.0/RestSharp.xml",
-        "lib/net6.0/RestSharp.dll",
-        "lib/net6.0/RestSharp.xml",
-        "lib/netstandard2.0/RestSharp.dll",
-        "lib/netstandard2.0/RestSharp.xml",
-        "restsharp.108.0.3.nupkg.sha512",
-        "restsharp.nuspec",
-        "restsharp.png"
       ]
     },
     "Serilog/2.12.0": {

@@ -29,10 +29,9 @@ try
 {
     Log.Information("Starting BMPTec API...");
     
-    // ========== ADD SERVICES TO CONTAINER ==========
-    
     // 1. Controllers
     builder.Services.AddControllers();
+    builder.Services.AddHttpClient();
     
     // Database
     builder.Services.AddDbContext<AppDbContext>(options =>
@@ -62,26 +61,18 @@ try
     
     // 3. Repositories
     builder.Services.AddScoped<IContaRepository, ContaRepository>();
-    //builder.Services.AddScoped<ITransacaoRepository, TransacaoRepository>();
-    //builder.Services.AddScoped<ITransferenciaRepository, TransferenciaRepository>();
-    // Adicione outros repositórios conforme necessário
+    builder.Services.AddScoped<ITransferenciaRepository, TransferenciaRepository>();
     
     // 4. Application Services
     builder.Services.AddScoped<IContaService, ContaService>();
-    //builder.Services.AddScoped<ITransacaoService, TransacaoService>();
-    //builder.Services.AddScoped<ITransferenciaService, TransferenciaService>();
+    builder.Services.AddScoped<ITransferenciaService, TransferenciaService>();
     
     // 5. Infrastructure Services
     builder.Services.AddScoped<ISequenceGenerator, DatabaseSequenceGenerator>();
     builder.Services.AddMemoryCache();
     
     // 6. AutoMapper
-    builder.Services.AddAutoMapper(
-        typeof(Program).Assembly,
-        typeof(Conta).Assembly,                    // Domain
-        typeof(ContaResponse).Assembly,            // Application
-        typeof(AutoMapperProfile).Assembly         // Onde está o Profile
-    );
+    builder.Services.AddAutoMapper(typeof(AutoMapperProfile).Assembly);
     
     //// 7. MediatR (se estiver usando)
     //builder.Services.AddMediatR(cfg => 
@@ -134,14 +125,13 @@ try
     
     // ========== CONFIGURE PIPELINE ==========
     
-    // Configure the HTTP request pipeline.
     if (app.Environment.IsDevelopment())
     {
         app.UseSwagger();
         app.UseSwaggerUI(c =>
         {
             c.SwaggerEndpoint("/swagger/v1/swagger.json", "BMPTec API v1");
-            c.RoutePrefix = "swagger";
+            c.RoutePrefix = "swagger"; // Para acessar em /swagger
         });
     }
     

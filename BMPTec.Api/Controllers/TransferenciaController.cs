@@ -28,7 +28,7 @@ namespace BMPTec.API.Controllers.v1
         /// </summary>
         /// <param name="request">Dados para criação da conta</param>
         /// <returns>Conta criada</returns>
-        [HttpPost]
+        [HttpPost("TransferirSaldoAsync")]
         [ProducesResponseType(typeof(TransferenciaSaldoResponse), StatusCodes.Status201Created)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
@@ -80,7 +80,7 @@ namespace BMPTec.API.Controllers.v1
         /// </summary>
         /// <param name="request">Dados para criação da conta</param>
         /// <returns>Conta criada</returns>
-        [HttpPost]
+        [HttpPost("RealizarDeposito")]
         [ProducesResponseType(typeof(DepositoResponse), StatusCodes.Status201Created)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]

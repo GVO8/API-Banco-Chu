@@ -9,42 +9,7 @@ namespace ChuBank.Application.Mappings
     public class AutoMapperProfile : Profile
     {
         public AutoMapperProfile()
-        {
-            // ========== REQUESTS PARA ENTIDADES ==========
-            
-            // CriarContaRequest -> Cliente
-            CreateMap<CriarContaRequest, Cliente>()
-                .ConstructUsing(src => new Cliente(
-                    src.Nome,
-                    src.CPF,
-                    src.Email,
-                    src.DataNascimento,
-                    src.Telefone))
-                .ForMember(dest => dest.Id, opt => opt.Ignore())
-                .ForMember(dest => dest.Contas, opt => opt.Ignore())
-                .ForMember(dest => dest.Ativo, opt => opt.MapFrom(_ => true));
-
-            //// TransferenciaRequest -> Transferencia (com validações)
-            //CreateMap<TransferenciaRequest, Transferencia>()
-            //    .ConstructUsing((src, context) =>
-            //    {
-            //        var contaOrigem = context.Items["ContaOrigem"] as Conta;
-            //        var contaDestino = context.Items["ContaDestino"] as Conta;
-            //        
-            //        return new Transferencia(
-            //            contaOrigem,
-            //            contaDestino,
-            //            src.Valor,
-            //            src.Descricao);
-            //    })
-            //    .ForMember(dest => dest.Id, opt => opt.Ignore())
-            //    .ForMember(dest => dest.Status, opt => opt.MapFrom(_ => StatusTransferencia.Pendente))
-            //    .ForMember(dest => dest.DataSolicitacao, opt => opt.MapFrom(_ => DateTime.UtcNow))
-            //    .ForMember(dest => dest.DataProcessamento, opt => opt.Ignore())
-            //    .ForMember(dest => dest.CodigoRastreio, opt => opt.MapFrom(_ => Guid.NewGuid().ToString("N").Substring(0, 10).ToUpper()));
-
-            // ========== ENTIDADES PARA RESPONSES ==========
-            
+        {   
             // Cliente -> ClienteResponse
             CreateMap<Cliente, ClienteResponse>()
                 .ForMember(dest => dest.CPF, 
@@ -69,59 +34,56 @@ namespace ChuBank.Application.Mappings
                     dest.NumeroConta = FormatNumeroConta(src.NumeroConta);
                 });
 
-            //// Transferencia -> TransferenciaResponse
-            //CreateMap<Transferencia, TransferenciaResponse>()
-            //    .ForMember(dest => dest.NumeroContaOrigem,
-            //        opt => opt.MapFrom(src => src.ContaOrigem.NumeroConta))
-            //    .ForMember(dest => dest.NomeClienteOrigem,
-            //        opt => opt.MapFrom(src => src.ContaOrigem.Cliente.Nome))
-            //    .ForMember(dest => dest.NumeroContaDestino,
-            //        opt => opt.MapFrom(src => src.ContaDestino.NumeroConta))
-            //    .ForMember(dest => dest.NomeClienteDestino,
-            //        opt => opt.MapFrom(src => src.ContaDestino.Cliente.Nome))
-            //    .ForMember(dest => dest.Valor,
-            //        opt => opt.MapFrom(src => Math.Round(src.Valor, 2)))
-            //    .ForMember(dest => dest.DataSolicitacao,
-            //        opt => opt.MapFrom(src => src.DataSolicitacao.ToLocalTime()))
-            //    .ForMember(dest => dest.DataProcessamento,
-            //        opt => opt.MapFrom(src => src.DataProcessamento.HasValue 
-            //            ? src.DataProcessamento.Value.ToLocalTime() 
-            //            : (DateTime?)null));
+            // Transferencia -> TransferenciaResponse
+            CreateMap<Transferencia, TransferenciaSaldoResponse>()
+                .ForMember(dest => dest.Id,
+                    opt => opt.MapFrom(src => src.Id))
+                .ForMember(dest => dest.Descricao,
+                    opt => opt.MapFrom(src => src.Descricao))
+                .ForMember(dest => dest.CodigoRastreio,
+                    opt => opt.MapFrom(src => src.CodigoRastreio))
+                .ForMember(dest => dest.ComprovanteUrl,
+                    opt => opt.MapFrom(src => src.ComprovanteUrl))
+                .ForMember(dest => dest.Taxa,
+                    opt => opt.MapFrom(src => src.Taxa))
+                .ForMember(dest => dest.ContaOrigemId,
+                    opt => opt.MapFrom(src => src.ContaOrigemId))
+                .ForMember(dest => dest.ContaDestinoId,
+                    opt => opt.MapFrom(src => src.ContaDestinoId))
+                .ForMember(dest => dest.Valor,
+                    opt => opt.MapFrom(src => Math.Round(src.Valor, 2)))
+                .ForMember(dest => dest.DataSolicitacao,
+                    opt => opt.MapFrom(src => src.DataSolicitacao.ToLocalTime()))
+                .ForMember(dest => dest.DataProcessamento,
+                    opt => opt.MapFrom(src => src.DataProcessamento.HasValue 
+                        ? src.DataProcessamento.Value.ToLocalTime() 
+                        : (DateTime?)null));
 
-            // ========== MAPEAMENTOS COMPLEXOS ==========
-            
-            //// Conta para ExtratoResponse (com transações agrupadas)
-            //CreateMap<Conta, ExtratoResponse>()
-            //    .ForMember(dest => dest.NumeroConta,
-            //        opt => opt.MapFrom(src => src.NumeroConta))
-            //    .ForMember(dest => dest.SaldoAtual,
-            //        opt => opt.MapFrom(src => Math.Round(src.Saldo, 2)))
-            //    .ForMember(dest => dest.DataInicio,
-            //        opt => opt.Ignore())
-            //    .ForMember(dest => dest.DataFim,
-            //        opt => opt.Ignore())
-            //    .ForMember(dest => dest.Transacoes,
-            //        opt => opt.MapFrom(src => src.Transacoes.OrderByDescending(t => t.DataTransacao)));
-
-            //// Paginação genérica
-            //CreateMap(typeof(PagedList<>), typeof(PaginatedResponse<>))
-            //    .ConvertUsing(typeof(PagedListConverter<,>));
-
-            //// ========== MAPEAMENTOS CUSTOMIZADOS ==========
-            //
-            //// Feriado da BrasilAPI para FeriadoCache
-            //CreateMap<FeriadoResponse, FeriadoCache>()
-            //    .ForMember(dest => dest.Id,
-            //        opt => opt.MapFrom(src => Guid.NewGuid()))
-            //    .ForMember(dest => dest.Data,
-            //        opt => opt.MapFrom(src => DateOnly.FromDateTime(src.Date)))
-            //    .ForMember(dest => dest.Nome,
-            //        opt => opt.MapFrom(src => src.Name))
-            //    .ForMember(dest => dest.Tipo,
-            //        opt => opt.MapFrom(src => src.Type))
-            //    .ForMember(dest => dest.CacheUntil,
-            //        opt => opt.MapFrom(src => DateTime.UtcNow.AddHours(24)));
+                // Transferencia -> TransferenciaResponse
+            CreateMap<Transferencia, DepositoResponse>()
+                .ForMember(dest => dest.Id,
+                    opt => opt.MapFrom(src => src.Id))
+                .ForMember(dest => dest.Descricao,
+                    opt => opt.MapFrom(src => src.Descricao))
+                .ForMember(dest => dest.CodigoRastreio,
+                    opt => opt.MapFrom(src => src.CodigoRastreio))
+                .ForMember(dest => dest.ComprovanteUrl,
+                    opt => opt.MapFrom(src => src.ComprovanteUrl))
+                .ForMember(dest => dest.ContaDestinoId,
+                    opt => opt.MapFrom(src => src.ContaDestinoId))
+                .ForMember(dest => dest.Valor,
+                    opt => opt.MapFrom(src => Math.Round(src.Valor, 2)))
+                .ForMember(dest => dest.DataSolicitacao,
+                    opt => opt.MapFrom(src => src.DataSolicitacao.ToLocalTime()))
+                .ForMember(dest => dest.DataProcessamento,
+                    opt => opt.MapFrom(src => src.DataProcessamento.HasValue 
+                        ? src.DataProcessamento.Value.ToLocalTime() 
+                        : (DateTime?)null));
         }
+
+        // Relacionamentos
+        public Guid? ContaOrigemId { get; private set; }
+        public Guid ContaDestinoId { get; private set; }
 
         // ========== MÉTODOS AUXILIARES PRIVADOS ==========
         

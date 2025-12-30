@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "qGllCFXncFw=",
+  "dgSpecHash": "o4pL0Jk7wE8=",
   "success": true,
   "projectFilePath": "C:\\dev\\programacao\\API-Banco-Chu\\BMPTec.Application\\BMPTec.Application.csproj",
   "expectedPackageFiles": [
@@ -9,7 +9,15 @@
     "C:\\Users\\guivo\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
     "C:\\Users\\guivo\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\guivo\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
-    "C:\\Users\\guivo\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.4\\microsoft.extensions.logging.abstractions.6.0.4.nupkg.sha512"
+    "C:\\Users\\guivo\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.0\\microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",
+    "C:\\Users\\guivo\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\guivo\\.nuget\\packages\\microsoft.extensions.http\\6.0.0\\microsoft.extensions.http.6.0.0.nupkg.sha512",
+    "C:\\Users\\guivo\\.nuget\\packages\\microsoft.extensions.logging\\6.0.0\\microsoft.extensions.logging.6.0.0.nupkg.sha512",
+    "C:\\Users\\guivo\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.4\\microsoft.extensions.logging.abstractions.6.0.4.nupkg.sha512",
+    "C:\\Users\\guivo\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "C:\\Users\\guivo\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\guivo\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
+    "C:\\Users\\guivo\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }

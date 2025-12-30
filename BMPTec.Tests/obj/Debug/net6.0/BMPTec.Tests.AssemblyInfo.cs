@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BMPTec.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8066e848e67a8ea20a7bf564da1dec194cdc8c52")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f3ffc171b16f7809a9ee52eac8a1655a51fe3a48")]
 [assembly: System.Reflection.AssemblyProductAttribute("BMPTec.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BMPTec.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

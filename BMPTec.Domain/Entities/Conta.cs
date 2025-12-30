@@ -50,10 +50,6 @@ namespace BMPTec.Domain.Entities
                 throw new InvalidOperationException("Conta inativa não pode receber créditos");
                 
             Saldo += valor;
-            
-            // Adicionar ao histórico
-            var transacao = new Transferencia(null ,this, valor, "Crédito em conta");
-            Transferencias.Add(transacao);
         }
 
         public void Debitar(decimal valor)
@@ -68,10 +64,6 @@ namespace BMPTec.Domain.Entities
                 throw new InvalidOperationException("Saldo insuficiente");
                 
             Saldo -= valor;
-            
-            // Adicionar ao histórico
-            var transacao = new Transferencia(this, null, valor, "Débito em conta");
-            Transferencias.Add(transacao);
         }
 
         public void Encerrar()

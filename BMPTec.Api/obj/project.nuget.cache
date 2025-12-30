@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "TwOfFo564Y0=",
+  "dgSpecHash": "DQ+XyWwO3zY=",
   "success": true,
   "projectFilePath": "C:\\dev\\programacao\\API-Banco-Chu\\BMPTec.Api\\BMPTec.Api.csproj",
   "expectedPackageFiles": [
@@ -37,6 +37,7 @@
     "C:\\Users\\guivo\\.nuget\\packages\\microsoft.extensions.dependencymodel\\3.0.0\\microsoft.extensions.dependencymodel.3.0.0.nupkg.sha512",
     "C:\\Users\\guivo\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\3.1.8\\microsoft.extensions.fileproviders.abstractions.3.1.8.nupkg.sha512",
     "C:\\Users\\guivo\\.nuget\\packages\\microsoft.extensions.hosting.abstractions\\3.1.8\\microsoft.extensions.hosting.abstractions.3.1.8.nupkg.sha512",
+    "C:\\Users\\guivo\\.nuget\\packages\\microsoft.extensions.http\\6.0.0\\microsoft.extensions.http.6.0.0.nupkg.sha512",
     "C:\\Users\\guivo\\.nuget\\packages\\microsoft.extensions.logging\\6.0.0\\microsoft.extensions.logging.6.0.0.nupkg.sha512",
     "C:\\Users\\guivo\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.4\\microsoft.extensions.logging.abstractions.6.0.4.nupkg.sha512",
     "C:\\Users\\guivo\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
@@ -56,7 +57,6 @@
     "C:\\Users\\guivo\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\guivo\\.nuget\\packages\\pipelines.sockets.unofficial\\2.2.8\\pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
     "C:\\Users\\guivo\\.nuget\\packages\\polly\\7.2.3\\polly.7.2.3.nupkg.sha512",
-    "C:\\Users\\guivo\\.nuget\\packages\\restsharp\\108.0.3\\restsharp.108.0.3.nupkg.sha512",
     "C:\\Users\\guivo\\.nuget\\packages\\serilog\\2.12.0\\serilog.2.12.0.nupkg.sha512",
     "C:\\Users\\guivo\\.nuget\\packages\\serilog.aspnetcore\\6.1.0\\serilog.aspnetcore.6.1.0.nupkg.sha512",
     "C:\\Users\\guivo\\.nuget\\packages\\serilog.extensions.hosting\\5.0.1\\serilog.extensions.hosting.5.0.1.nupkg.sha512",
