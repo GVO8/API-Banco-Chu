@@ -105,5 +105,10 @@ namespace BMPTec.Domain.Entities
             if (Cliente == null)
                 throw new ArgumentException("Cliente é obrigatório");
         }
+
+        public override string ToString()
+        {
+            return $"Número Conta: {NumeroConta} - Agência: {Agencia}";
+        }
     }
 }

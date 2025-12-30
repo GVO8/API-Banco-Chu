@@ -1,6 +1,4 @@
 using BMPTec.Domain.Entities.Base;
-using BMPTec.Domain.Enums;
-
 namespace BMPTec.Domain.Entities
 {
     public class Transferencia : AuditableEntity
@@ -13,7 +11,6 @@ namespace BMPTec.Domain.Entities
             decimal valor,
             string descricao)
         {
-            //ContaOrigem = contaOrigem ?? throw new ArgumentNullException(nameof(contaOrigem));
             ContaOrigemId = contaOrigem == null ? null : contaOrigem.Id;
             
             ContaDestino = contaDestino ?? throw new ArgumentNullException(nameof(contaDestino));
@@ -22,7 +19,6 @@ namespace BMPTec.Domain.Entities
             Valor = valor > 0 ? valor : throw new ArgumentException("Valor deve ser positivo", nameof(valor));
             Descricao = descricao ?? throw new ArgumentNullException(nameof(descricao));
             DataSolicitacao = DateTime.UtcNow;
-            Status = StatusTransferencia.Pendente;
             CodigoRastreio = GerarCodigoRastreio();
 
             Validar();
@@ -33,7 +29,6 @@ namespace BMPTec.Domain.Entities
         public string Descricao { get; private set; }
         public DateTime DataSolicitacao { get; private set; }
         public DateTime? DataProcessamento { get; private set; }
-        public StatusTransferencia Status { get; private set; }
         public string CodigoRastreio { get; private set; }
         public string ComprovanteUrl { get; private set; } = "";
         public decimal? Taxa { get; private set; }
@@ -46,39 +41,39 @@ namespace BMPTec.Domain.Entities
         public virtual Conta ContaDestino { get; private set; }
 
         // Métodos de negócio
-        public void Concluir(decimal? taxa = null)
-        {
-            if (Status != StatusTransferencia.Pendente && Status != StatusTransferencia.Processando)
-                throw new InvalidOperationException("Apenas transferências pendentes ou em processamento podem ser concluídas");
-            
-            Status = StatusTransferencia.Concluida;
-            DataProcessamento = DateTime.UtcNow;
-            Taxa = taxa;
-            
-            // Atualizar saldos das contas
-            ContaOrigem.Debitar(Valor + (taxa ?? 0));
-            ContaDestino.Creditar(Valor);
-        }
+        //public void Concluir(decimal? taxa = null)
+        //{
+        //    if (Status != StatusTransferencia.Pendente && Status != StatusTransferencia.Processando)
+        //        throw new InvalidOperationException("Apenas transferências pendentes ou em processamento podem ser concluídas");
+        //    
+        //    Status = StatusTransferencia.Concluida;
+        //    DataProcessamento = DateTime.UtcNow;
+        //    Taxa = taxa;
+        //    
+        //    // Atualizar saldos das contas
+        //    ContaOrigem.Debitar(Valor + (taxa ?? 0));
+        //    ContaDestino.Creditar(Valor);
+        //}
 
-        public void Cancelar(string motivo)
-        {
-            Status = StatusTransferencia.Cancelada;
-            Descricao = $"{Descricao} [CANCELADA: {motivo}]";
-        }
+        //public void Cancelar(string motivo)
+        //{
+        //    Status = StatusTransferencia.Cancelada;
+        //    Descricao = $"{Descricao} [CANCELADA: {motivo}]";
+        //}
+//
+        //public void Falhar(string motivo)
+        //{
+        //    Status = StatusTransferencia.Falha;
+        //    Descricao = $"{Descricao} [FALHA: {motivo}]";
+        //}
 
-        public void Falhar(string motivo)
-        {
-            Status = StatusTransferencia.Falha;
-            Descricao = $"{Descricao} [FALHA: {motivo}]";
-        }
-
-        public void IniciarProcessamento()
-        {
-            if (Status != StatusTransferencia.Pendente)
-                throw new InvalidOperationException("Apenas transferências pendentes podem iniciar processamento");
-            
-            Status = StatusTransferencia.Processando;
-        }
+        //public void IniciarProcessamento()
+        //{
+        //    if (Status != StatusTransferencia.Pendente)
+        //        throw new InvalidOperationException("Apenas transferências pendentes podem iniciar processamento");
+        //    
+        //    Status = StatusTransferencia.Processando;
+        //}
 
         public bool EhDiaUtil()
         {
@@ -108,7 +103,7 @@ namespace BMPTec.Domain.Entities
 
         public string ObterResumo()
         {
-            return $"Transferência: {ContaOrigem.NumeroConta} → {ContaDestino.NumeroConta} | R$ {Valor:N2} | {Status}";
+            return $"Transferência: {ContaOrigem.NumeroConta} → {ContaDestino.NumeroConta} | R$ {Valor:N2}";
         }
 
         private void Validar()
@@ -132,7 +127,7 @@ namespace BMPTec.Domain.Entities
 
         public override string ToString()
         {
-            return $"Transferencia {CodigoRastreio} | R$ {Valor:N2} | {Status}";
+            return $"Transferencia {CodigoRastreio} | R$ {Valor:N2}";
         }
     }
 }
