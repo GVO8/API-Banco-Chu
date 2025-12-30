@@ -1,0 +1,22 @@
+2025-12-29 21:40:19.321 -03:00 [INF] Starting BMPTec API...
+2025-12-29 21:40:22.388 -03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-12-29 21:40:22.531 -03:00 [WRN] No store type was specified for the decimal property 'Saldo' on entity type 'Conta'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-29 21:40:22.538 -03:00 [WRN] No store type was specified for the decimal property 'Taxa' on entity type 'Transferencia'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-29 21:40:22.539 -03:00 [WRN] No store type was specified for the decimal property 'Valor' on entity type 'Transferencia'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-29 21:40:23.538 -03:00 [INF] BMPTec API started successfully
+2025-12-29 21:40:57.383 -03:00 [WRN] Failed to determine the https port for redirect.
+2025-12-29 21:41:02.267 -03:00 [INF] Recebida requisição para criar conta para Guilherme
+2025-12-29 21:41:02.273 -03:00 [INF] Iniciando criação de conta para CPF: 131.643.709-46
+2025-12-29 21:41:03.343 -03:00 [INF] Cliente já cadastrado com CPF: 131.643.709-46
+2025-12-29 21:41:38.825 -03:00 [INF] Conta criada com sucesso: 001001-4
+2025-12-29 21:42:41.263 -03:00 [INF] Starting BMPTec API...
+2025-12-29 21:42:43.679 -03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-12-29 21:42:43.831 -03:00 [WRN] No store type was specified for the decimal property 'Saldo' on entity type 'Conta'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-29 21:42:43.836 -03:00 [WRN] No store type was specified for the decimal property 'Taxa' on entity type 'Transferencia'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-29 21:42:43.836 -03:00 [WRN] No store type was specified for the decimal property 'Valor' on entity type 'Transferencia'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-29 21:42:44.725 -03:00 [INF] BMPTec API started successfully
+2025-12-29 21:43:28.438 -03:00 [WRN] Failed to determine the https port for redirect.
+2025-12-29 21:43:34.188 -03:00 [INF] Recebida requisição para criar conta para Guilherme
+2025-12-29 21:43:34.193 -03:00 [INF] Iniciando criação de conta para CPF: 131.643.709-46
+2025-12-29 21:43:35.068 -03:00 [INF] Cliente já cadastrado com CPF: 131.643.709-46
+2025-12-29 21:43:58.420 -03:00 [INF] Conta criada com sucesso: 001002-2

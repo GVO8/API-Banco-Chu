@@ -1,0 +1,138 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      // Task para build do projeto
+      "label": "build",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "build",
+        "${workspaceFolder}/BMPTec.API/BMPTec.API.csproj",
+        "/property:GenerateFullPaths=true",
+        "/consoleloggerparameters:NoSummary"
+      ],
+      "problemMatcher": "$msCompile",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      // Task para clean
+      "label": "clean",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "clean",
+        "${workspaceFolder}/BMPTec.API/BMPTec.API.csproj"
+      ],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      // Task para restore packages
+      "label": "restore",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "restore",
+        "${workspaceFolder}/BMPTec.API/BMPTec.API.csproj"
+      ],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      // Task para publish
+      "label": "publish",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "publish",
+        "${workspaceFolder}/BMPTec.API/BMPTec.API.csproj"
+      ],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      // Task para rodar testes
+      "label": "test",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "test",
+        "${workspaceFolder}/BMPTec.Tests/BMPTec.Tests.csproj",
+        "--verbosity",
+        "normal"
+      ],
+      "group": "test",
+      "problemMatcher": "$msCompile"
+    },
+    {
+      // Task para rodar migrações do EF Core
+      "label": "ef-migrate",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "ef",
+        "database",
+        "update",
+        "--project",
+        "${workspaceFolder}/BMPTec.Infrastructure/BMPTec.Infrastructure.csproj",
+        "--startup-project",
+        "${workspaceFolder}/BMPTec.API/BMPTec.API.csproj"
+      ]
+    },
+    {
+      // Task para criar nova migration
+      "label": "ef-add-migration",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "ef",
+        "migrations",
+        "add",
+        "InitialCreate",
+        "--project",
+        "${workspaceFolder}/BMPTec.Infrastructure/BMPTec.Infrastructure.csproj",
+        "--startup-project",
+        "${workspaceFolder}/BMPTec.API/BMPTec.API.csproj",
+        "--output-dir",
+        "Data/Migrations"
+      ]
+    },
+    {
+      // Task para Docker build
+      "label": "docker-build",
+      "type": "docker-build",
+      "dependsOn": ["build"],
+      "dockerBuild": {
+        "tag": "bmptec-api:latest",
+        "dockerfile": "${workspaceFolder}/BMPTec.API/Dockerfile",
+        "context": "${workspaceFolder}",
+        "pull": true
+      },
+      "netCore": {
+        "appProject": "${workspaceFolder}/BMPTec.API/BMPTec.API.csproj"
+      }
+    },
+    {
+      // Task para Docker run
+      "label": "docker-run: debug",
+      "dependsOn": ["docker-build"],
+      "type": "docker-run",
+      "dockerRun": {
+        "env": {
+          "ASPNETCORE_ENVIRONMENT": "Development"
+        },
+        "ports": [
+          {
+            "containerPort": 5000,
+            "hostPort": 5000
+          },
+          {
+            "containerPort": 5001,
+            "hostPort": 5001
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "3H2LQrBKMJZHoRvIZ50oqpFmRYP68WccYppqJ/2cpx0=",
+  "Source": "BMPTec.Api",
+  "BasePath": "_content/BMPTec.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

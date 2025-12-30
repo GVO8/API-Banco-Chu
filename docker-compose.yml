@@ -1,0 +1,21 @@
+﻿services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: bmptec-sqlserver
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=YourStrong@Passw0rd
+      - MSSQL_PID=Developer
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserver_data:/var/opt/mssql
+      - ./scripts/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - bmptec-network
+    restart: unless-stopped
+    # Adicionar command para forçar execução
+    command: >
+      /opt/mssql/bin/sqlservr
+      --accept-eula
+      --init-file /docker-entrypoint-initdb.d/init.sql

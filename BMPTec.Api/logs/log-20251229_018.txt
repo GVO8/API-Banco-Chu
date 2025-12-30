@@ -1,0 +1,39 @@
+2025-12-29 22:07:04.653 -03:00 [INF] Starting BMPTec API...
+2025-12-29 22:07:07.128 -03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-12-29 22:07:07.227 -03:00 [WRN] No store type was specified for the decimal property 'Saldo' on entity type 'Conta'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-29 22:07:07.233 -03:00 [WRN] No store type was specified for the decimal property 'Taxa' on entity type 'Transferencia'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-29 22:07:07.233 -03:00 [WRN] No store type was specified for the decimal property 'Valor' on entity type 'Transferencia'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-29 22:07:08.440 -03:00 [INF] BMPTec API started successfully
+2025-12-29 22:07:33.340 -03:00 [WRN] Failed to determine the https port for redirect.
+2025-12-29 22:07:37.154 -03:00 [INF] Recebida requisição para criar conta para Guilherme
+2025-12-29 22:07:37.157 -03:00 [INF] Iniciando criação de conta para CPF: 131.643.709-46
+2025-12-29 22:07:38.035 -03:00 [INF] Cliente já cadastrado com CPF: 131.643.709-46
+2025-12-29 22:08:04.599 -03:00 [INF] Conta criada com sucesso: 001004-9
+2025-12-29 22:11:22.317 -03:00 [INF] Starting BMPTec API...
+2025-12-29 22:11:25.895 -03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-12-29 22:11:25.987 -03:00 [WRN] No store type was specified for the decimal property 'Saldo' on entity type 'Conta'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-29 22:11:25.994 -03:00 [WRN] No store type was specified for the decimal property 'Taxa' on entity type 'Transferencia'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-29 22:11:25.995 -03:00 [WRN] No store type was specified for the decimal property 'Valor' on entity type 'Transferencia'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-29 22:11:27.058 -03:00 [INF] BMPTec API started successfully
+2025-12-29 23:46:00.941 -03:00 [WRN] Failed to determine the https port for redirect.
+2025-12-29 23:46:04.040 -03:00 [INF] Recebida requisição para criar conta para Guilherme
+2025-12-29 23:46:04.044 -03:00 [INF] Iniciando criação de conta para CPF: 131.643.709-46
+2025-12-29 23:46:05.046 -03:00 [INF] Cliente já cadastrado com CPF: 131.643.709-46
+2025-12-29 23:46:07.298 -03:00 [INF] Conta criada com sucesso: 001005-7
+2025-12-29 23:46:16.703 -03:00 [ERR] Erro ao criar conta para CPF: 131.643.709-46
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Conta -> ContaResponse
+BMPTec.Domain.Entities.Conta -> BMPTec.Application.DTOs.Responses.ContaResponse
+   at lambda_method180(Closure , Object , ContaResponse , ResolutionContext )
+   at BMPTec.Application.Services.ContaService.CriarContaAsync(CriarContaRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Application\Services\ContaService.cs:line 90
+2025-12-29 23:46:16.869 -03:00 [ERR] Erro inesperado ao criar conta
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Conta -> ContaResponse
+BMPTec.Domain.Entities.Conta -> BMPTec.Application.DTOs.Responses.ContaResponse
+   at lambda_method180(Closure , Object , ContaResponse , ResolutionContext )
+   at BMPTec.Application.Services.ContaService.CriarContaAsync(CriarContaRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Application\Services\ContaService.cs:line 90
+   at BMPTec.API.Controllers.v1.ContasController.CriarConta(CriarContaRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Api\Controllers\ContasController.cs:line 42

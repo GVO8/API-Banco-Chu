@@ -1,0 +1,29 @@
+2025-12-30 00:00:08.167 -03:00 [INF] Starting BMPTec API...
+2025-12-30 00:00:10.336 -03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-12-30 00:00:10.402 -03:00 [WRN] No store type was specified for the decimal property 'Saldo' on entity type 'Conta'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-30 00:00:10.406 -03:00 [WRN] No store type was specified for the decimal property 'Taxa' on entity type 'Transferencia'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-30 00:00:10.407 -03:00 [WRN] No store type was specified for the decimal property 'Valor' on entity type 'Transferencia'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-30 00:00:11.197 -03:00 [INF] BMPTec API started successfully
+2025-12-30 00:01:31.469 -03:00 [WRN] Failed to determine the https port for redirect.
+2025-12-30 00:01:31.792 -03:00 [INF] Recebida requisição para criar conta para Guilherme
+2025-12-30 00:01:31.795 -03:00 [INF] Iniciando criação de conta para CPF: 131.643.709-46
+2025-12-30 00:01:32.874 -03:00 [INF] Cliente já cadastrado com CPF: 131.643.709-46
+2025-12-30 00:01:33.443 -03:00 [INF] Conta criada com sucesso: 001009-0
+2025-12-30 00:01:56.786 -03:00 [INF] Conta criada com sucesso: 001009-0
+2025-12-30 00:02:58.721 -03:00 [INF] Recebida requisição para criar conta para Guilherme
+2025-12-30 00:02:58.722 -03:00 [INF] Iniciando criação de conta para CPF: 131.643.709-46
+2025-12-30 00:02:58.798 -03:00 [INF] Cliente já cadastrado com CPF: 131.643.709-46
+2025-12-30 00:02:58.878 -03:00 [ERR] Erro ao criar conta para CPF: 131.643.709-46
+System.ArgumentNullException: Value cannot be null. (Parameter 'contaDestino')
+   at BMPTec.Domain.Entities.Transferencia..ctor(Conta contaOrigem, Conta contaDestino, Decimal valor, String descricao) in C:\dev\programacao\API-Banco-Chu\BMPTec.Domain\Entities\Transferencia.cs:line 20
+   at BMPTec.Domain.Entities.Conta.Creditar(Decimal valor) in C:\dev\programacao\API-Banco-Chu\BMPTec.Domain\Entities\Conta.cs:line 58
+   at BMPTec.Application.Services.ContaService.CriarContaAsync(CriarContaRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Application\Services\ContaService.cs:line 81
+2025-12-30 00:02:59.027 -03:00 [WRN] Erro de validação ao criar conta
+System.ArgumentNullException: Value cannot be null. (Parameter 'contaDestino')
+   at BMPTec.Domain.Entities.Transferencia..ctor(Conta contaOrigem, Conta contaDestino, Decimal valor, String descricao) in C:\dev\programacao\API-Banco-Chu\BMPTec.Domain\Entities\Transferencia.cs:line 20
+   at BMPTec.Domain.Entities.Conta.Creditar(Decimal valor) in C:\dev\programacao\API-Banco-Chu\BMPTec.Domain\Entities\Conta.cs:line 58
+   at BMPTec.Application.Services.ContaService.CriarContaAsync(CriarContaRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Application\Services\ContaService.cs:line 81
+   at BMPTec.API.Controllers.v1.ContasController.CriarConta(CriarContaRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Api\Controllers\ContasController.cs:line 42
+2025-12-30 00:03:48.397 -03:00 [INF] Recebida requisição para criar conta para Guilherme
+2025-12-30 00:03:59.036 -03:00 [INF] Iniciando criação de conta para CPF: 131.643.709-46
+2025-12-30 00:04:20.900 -03:00 [INF] Cliente já cadastrado com CPF: 131.643.709-46

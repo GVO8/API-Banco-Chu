@@ -1,0 +1,85 @@
+2025-12-29 21:17:32.621 -03:00 [INF] Starting BMPTec API...
+2025-12-29 21:17:35.364 -03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-12-29 21:17:35.451 -03:00 [WRN] No store type was specified for the decimal property 'Saldo' on entity type 'Conta'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-29 21:17:35.457 -03:00 [WRN] No store type was specified for the decimal property 'Taxa' on entity type 'Transferencia'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-29 21:17:35.458 -03:00 [WRN] No store type was specified for the decimal property 'Valor' on entity type 'Transferencia'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-29 21:17:36.465 -03:00 [INF] BMPTec API started successfully
+2025-12-29 21:22:43.745 -03:00 [WRN] Failed to determine the https port for redirect.
+2025-12-29 21:22:47.761 -03:00 [INF] Recebida requisição para criar conta para Guilherme
+2025-12-29 21:22:50.892 -03:00 [INF] Iniciando criação de conta para CPF: 131.643.709-46
+2025-12-29 21:23:00.231 -03:00 [INF] Cliente já cadastrado com CPF: 131.643.709-46
+2025-12-29 21:28:57.908 -03:00 [ERR] Erro ao criar conta para CPF: 131.643.709-46
+System.InvalidOperationException: The LINQ expression 'DbSet<Conta>()
+    .Max(c => (long?)(long)c.Id.GetHashCode())' could not be translated. Additional information: Translation of method 'object.GetHashCode' failed. If this method can be mapped to your custom function, see https://go.microsoft.com/fwlink/?linkid=2132413 for more information. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to 'AsEnumerable', 'AsAsyncEnumerable', 'ToList', or 'ToListAsync'. See https://go.microsoft.com/fwlink/?linkid=2101038 for more information.
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.<VisitMethodCall>g__CheckTranslated|15_0(ShapedQueryExpression translated, <>c__DisplayClass15_0& )
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass12_0`1.<ExecuteAsync>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, LambdaExpression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.MaxAsync[TSource,TResult](IQueryable`1 source, Expression`1 selector, CancellationToken cancellationToken)
+   at BMPTec.Infrastructure.Services.DatabaseSequenceGenerator.GetNextFromMaxIdAsync(String sequenceName) in C:\dev\programacao\API-Banco-Chu\BMPTec.Infrastructure\Services\DatabaseSequenceGenerator.cs:line 193
+   at BMPTec.Infrastructure.Services.DatabaseSequenceGenerator.GetNextFromDatabaseAsync(String sequenceName) in C:\dev\programacao\API-Banco-Chu\BMPTec.Infrastructure\Services\DatabaseSequenceGenerator.cs:line 164
+   at BMPTec.Infrastructure.Services.DatabaseSequenceGenerator.NextAsync(String sequenceName) in C:\dev\programacao\API-Banco-Chu\BMPTec.Infrastructure\Services\DatabaseSequenceGenerator.cs:line 58
+   at BMPTec.Infrastructure.Services.DatabaseSequenceGenerator.GerarNumeroContaAsync() in C:\dev\programacao\API-Banco-Chu\BMPTec.Infrastructure\Services\DatabaseSequenceGenerator.cs:line 69
+   at BMPTec.Application.Services.ContaService.GerarNumeroContaUnicoAsync() in C:\dev\programacao\API-Banco-Chu\BMPTec.Application\Services\ContaService.cs:line 118
+   at BMPTec.Application.Services.ContaService.CriarContaAsync(CriarContaRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Application\Services\ContaService.cs:line 68
+2025-12-29 21:28:58.061 -03:00 [WRN] Operação inválida ao criar conta
+System.InvalidOperationException: The LINQ expression 'DbSet<Conta>()
+    .Max(c => (long?)(long)c.Id.GetHashCode())' could not be translated. Additional information: Translation of method 'object.GetHashCode' failed. If this method can be mapped to your custom function, see https://go.microsoft.com/fwlink/?linkid=2132413 for more information. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to 'AsEnumerable', 'AsAsyncEnumerable', 'ToList', or 'ToListAsync'. See https://go.microsoft.com/fwlink/?linkid=2101038 for more information.
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.<VisitMethodCall>g__CheckTranslated|15_0(ShapedQueryExpression translated, <>c__DisplayClass15_0& )
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass12_0`1.<ExecuteAsync>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, LambdaExpression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.MaxAsync[TSource,TResult](IQueryable`1 source, Expression`1 selector, CancellationToken cancellationToken)
+   at BMPTec.Infrastructure.Services.DatabaseSequenceGenerator.GetNextFromMaxIdAsync(String sequenceName) in C:\dev\programacao\API-Banco-Chu\BMPTec.Infrastructure\Services\DatabaseSequenceGenerator.cs:line 193
+   at BMPTec.Infrastructure.Services.DatabaseSequenceGenerator.GetNextFromDatabaseAsync(String sequenceName) in C:\dev\programacao\API-Banco-Chu\BMPTec.Infrastructure\Services\DatabaseSequenceGenerator.cs:line 164
+   at BMPTec.Infrastructure.Services.DatabaseSequenceGenerator.NextAsync(String sequenceName) in C:\dev\programacao\API-Banco-Chu\BMPTec.Infrastructure\Services\DatabaseSequenceGenerator.cs:line 58
+   at BMPTec.Infrastructure.Services.DatabaseSequenceGenerator.GerarNumeroContaAsync() in C:\dev\programacao\API-Banco-Chu\BMPTec.Infrastructure\Services\DatabaseSequenceGenerator.cs:line 69
+   at BMPTec.Application.Services.ContaService.GerarNumeroContaUnicoAsync() in C:\dev\programacao\API-Banco-Chu\BMPTec.Application\Services\ContaService.cs:line 118
+   at BMPTec.Application.Services.ContaService.CriarContaAsync(CriarContaRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Application\Services\ContaService.cs:line 68
+   at BMPTec.API.Controllers.v1.ContasController.CriarConta(CriarContaRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Api\Controllers\ContasController.cs:line 42
+2025-12-29 21:29:16.917 -03:00 [INF] Recebida requisição para criar conta para Guilherme
+2025-12-29 21:29:16.917 -03:00 [INF] Iniciando criação de conta para CPF: 131.643.709-46
+2025-12-29 21:29:17.004 -03:00 [INF] Cliente já cadastrado com CPF: 131.643.709-46
+2025-12-29 21:31:06.030 -03:00 [INF] Conta criada com sucesso: 001000-6
+2025-12-29 21:31:39.128 -03:00 [ERR] Erro ao criar conta para CPF: 131.643.709-46
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Conta -> ContaResponse
+BMPTec.Domain.Entities.Conta -> BMPTec.Application.DTOs.Responses.ContaResponse
+   at lambda_method180(Closure , Object , ContaResponse , ResolutionContext )
+   at BMPTec.Application.Services.ContaService.CriarContaAsync(CriarContaRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Application\Services\ContaService.cs:line 90
+2025-12-29 21:31:39.497 -03:00 [ERR] Erro inesperado ao criar conta
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Conta -> ContaResponse
+BMPTec.Domain.Entities.Conta -> BMPTec.Application.DTOs.Responses.ContaResponse
+   at lambda_method180(Closure , Object , ContaResponse , ResolutionContext )
+   at BMPTec.Application.Services.ContaService.CriarContaAsync(CriarContaRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Application\Services\ContaService.cs:line 90
+   at BMPTec.API.Controllers.v1.ContasController.CriarConta(CriarContaRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Api\Controllers\ContasController.cs:line 42
+2025-12-29 21:40:19.321 -03:00 [INF] Starting BMPTec API...
+2025-12-29 21:40:22.388 -03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-12-29 21:40:22.531 -03:00 [WRN] No store type was specified for the decimal property 'Saldo' on entity type 'Conta'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-29 21:40:22.538 -03:00 [WRN] No store type was specified for the decimal property 'Taxa' on entity type 'Transferencia'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-29 21:40:22.539 -03:00 [WRN] No store type was specified for the decimal property 'Valor' on entity type 'Transferencia'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-29 21:40:23.538 -03:00 [INF] BMPTec API started successfully
+2025-12-29 21:40:57.383 -03:00 [WRN] Failed to determine the https port for redirect.
+2025-12-29 21:41:02.267 -03:00 [INF] Recebida requisição para criar conta para Guilherme
+2025-12-29 21:41:02.273 -03:00 [INF] Iniciando criação de conta para CPF: 131.643.709-46
+2025-12-29 21:41:03.343 -03:00 [INF] Cliente já cadastrado com CPF: 131.643.709-46
+2025-12-29 21:41:38.825 -03:00 [INF] Conta criada com sucesso: 001001-4

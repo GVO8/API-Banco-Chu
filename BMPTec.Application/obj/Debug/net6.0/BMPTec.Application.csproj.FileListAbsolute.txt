@@ -1,0 +1,16 @@
+C:\dev\programacao\API-Banco-Chu\BMPTec.Application\obj\Debug\net6.0\BMPTec.Application.csproj.AssemblyReference.cache
+C:\dev\programacao\API-Banco-Chu\BMPTec.Application\obj\Debug\net6.0\BMPTec.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\programacao\API-Banco-Chu\BMPTec.Application\obj\Debug\net6.0\BMPTec.Application.AssemblyInfoInputs.cache
+C:\dev\programacao\API-Banco-Chu\BMPTec.Application\obj\Debug\net6.0\BMPTec.Application.AssemblyInfo.cs
+C:\dev\programacao\API-Banco-Chu\BMPTec.Application\obj\Debug\net6.0\BMPTec.Application.csproj.CoreCompileInputs.cache
+C:\dev\programacao\API-Banco-Chu\BMPTec.Application\obj\Debug\net6.0\BMPTec.Application.sourcelink.json
+C:\dev\programacao\API-Banco-Chu\BMPTec.Application\bin\Debug\net6.0\BMPTec.Application.deps.json
+C:\dev\programacao\API-Banco-Chu\BMPTec.Application\bin\Debug\net6.0\BMPTec.Application.dll
+C:\dev\programacao\API-Banco-Chu\BMPTec.Application\bin\Debug\net6.0\BMPTec.Application.pdb
+C:\dev\programacao\API-Banco-Chu\BMPTec.Application\bin\Debug\net6.0\BMPTec.Domain.dll
+C:\dev\programacao\API-Banco-Chu\BMPTec.Application\bin\Debug\net6.0\BMPTec.Domain.pdb
+C:\dev\programacao\API-Banco-Chu\BMPTec.Application\obj\Debug\net6.0\BMPTec.A.CBECBF74.Up2Date
+C:\dev\programacao\API-Banco-Chu\BMPTec.Application\obj\Debug\net6.0\BMPTec.Application.dll
+C:\dev\programacao\API-Banco-Chu\BMPTec.Application\obj\Debug\net6.0\refint\BMPTec.Application.dll
+C:\dev\programacao\API-Banco-Chu\BMPTec.Application\obj\Debug\net6.0\BMPTec.Application.pdb
+C:\dev\programacao\API-Banco-Chu\BMPTec.Application\obj\Debug\net6.0\ref\BMPTec.Application.dll

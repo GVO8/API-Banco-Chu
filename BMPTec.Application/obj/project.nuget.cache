@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "qGllCFXncFw=",
+  "success": true,
+  "projectFilePath": "C:\\dev\\programacao\\API-Banco-Chu\\BMPTec.Application\\BMPTec.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\guivo\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
+    "C:\\Users\\guivo\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
+    "C:\\Users\\guivo\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
+    "C:\\Users\\guivo\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
+    "C:\\Users\\guivo\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\guivo\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.4\\microsoft.extensions.logging.abstractions.6.0.4.nupkg.sha512"
+  ],
+  "logs": []
+}
