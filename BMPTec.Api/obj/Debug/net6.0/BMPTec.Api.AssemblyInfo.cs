@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BMPTec.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8c4ce08b4a2fd13490e89d8da3c88ed040477968")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1c1a5cb8b67acb5f473f6d337a9877171082eb5a")]
 [assembly: System.Reflection.AssemblyProductAttribute("BMPTec.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BMPTec.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

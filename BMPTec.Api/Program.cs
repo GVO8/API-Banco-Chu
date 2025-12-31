@@ -1,8 +1,6 @@
-using BMPTec.Application.DTOs.Responses;
 using BMPTec.Application.Interfaces.Repositories;
 using BMPTec.Application.Interfaces.Services;
 using BMPTec.Application.Services;
-using BMPTec.Domain.Entities;
 using BMPTec.Infrastructure.Data;
 using BMPTec.Infrastructure.Data.Repositories;
 using BMPTec.Infrastructure.Services;
@@ -66,9 +64,12 @@ try
     // 4. Application Services
     builder.Services.AddScoped<IContaService, ContaService>();
     builder.Services.AddScoped<ITransferenciaService, TransferenciaService>();
+
+    builder.Services.AddScoped<IExtratoAppService, ExtratoAppService>();
     
     // 5. Infrastructure Services
     builder.Services.AddScoped<ISequenceGenerator, DatabaseSequenceGenerator>();
+    builder.Services.AddScoped<IExtratoService, ExtratoService>();
     builder.Services.AddMemoryCache();
     
     // 6. AutoMapper

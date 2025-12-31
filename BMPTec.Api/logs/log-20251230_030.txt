@@ -1,0 +1,34 @@
+2025-12-30 23:11:52.558 -03:00 [INF] Starting BMPTec API...
+2025-12-30 23:11:58.807 -03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-12-30 23:11:58.912 -03:00 [WRN] No store type was specified for the decimal property 'Saldo' on entity type 'Conta'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-30 23:11:58.917 -03:00 [WRN] No store type was specified for the decimal property 'Taxa' on entity type 'Transferencia'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-30 23:11:58.917 -03:00 [WRN] No store type was specified for the decimal property 'Valor' on entity type 'Transferencia'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-30 23:11:59.904 -03:00 [INF] BMPTec API started successfully
+2025-12-30 23:27:34.190 -03:00 [INF] Starting BMPTec API...
+2025-12-30 23:27:36.508 -03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-12-30 23:27:36.578 -03:00 [WRN] No store type was specified for the decimal property 'Saldo' on entity type 'Conta'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-30 23:27:36.583 -03:00 [WRN] No store type was specified for the decimal property 'Taxa' on entity type 'Transferencia'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-30 23:27:36.584 -03:00 [WRN] No store type was specified for the decimal property 'Valor' on entity type 'Transferencia'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-30 23:27:37.553 -03:00 [INF] BMPTec API started successfully
+2025-12-30 23:28:04.531 -03:00 [WRN] Failed to determine the https port for redirect.
+2025-12-30 23:28:04.553 -03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2025-12-30 23:29:22.798 -03:00 [INF] Recebida requisição para criar conta para string
+2025-12-30 23:29:22.801 -03:00 [INF] Iniciando criação de conta para CPF: string
+2025-12-30 23:29:23.937 -03:00 [ERR] Erro ao criar conta para CPF: string
+System.ArgumentException: Cliente deve ser maior de 18 anos
+   at BMPTec.Domain.Entities.Cliente.Validate() in C:\dev\programacao\API-Banco-Chu\BMPTec.Domain\Entities\Cliente.cs:line 53
+   at BMPTec.Domain.Entities.Cliente..ctor(String nome, String cpf, String email, DateTime dataNascimento, String telefone) in C:\dev\programacao\API-Banco-Chu\BMPTec.Domain\Entities\Cliente.cs:line 18
+   at BMPTec.Application.Services.ContaService.CriarContaAsync(CriarContaRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Application\Services\ContaService.cs:line 55
+2025-12-30 23:29:24.147 -03:00 [WRN] Erro de validação ao criar conta
+System.ArgumentException: Cliente deve ser maior de 18 anos
+   at BMPTec.Domain.Entities.Cliente.Validate() in C:\dev\programacao\API-Banco-Chu\BMPTec.Domain\Entities\Cliente.cs:line 53
+   at BMPTec.Domain.Entities.Cliente..ctor(String nome, String cpf, String email, DateTime dataNascimento, String telefone) in C:\dev\programacao\API-Banco-Chu\BMPTec.Domain\Entities\Cliente.cs:line 18
+   at BMPTec.Application.Services.ContaService.CriarContaAsync(CriarContaRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Application\Services\ContaService.cs:line 55
+   at BMPTec.API.Controllers.v1.ContasController.CriarConta(CriarContaRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Api\Controllers\ContasController.cs:line 42

@@ -12,3 +12,13 @@
 2025-12-30 09:36:30.588 -03:00 [INF] Iniciando transferência da conta de id "2aeecc2d-aa39-4537-d4f8-08de47936718" para conta de id "e9e1fa2f-cf86-4be1-d4f7-08de47936718"
 2025-12-30 09:37:05.994 -03:00 [INF] Buscando feriados nacionais para o ano 2025
 2025-12-30 09:40:57.721 -03:00 [INF] Starting BMPTec API...
+2025-12-30 09:41:04.510 -03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-12-30 09:41:04.706 -03:00 [WRN] No store type was specified for the decimal property 'Saldo' on entity type 'Conta'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-30 09:41:04.714 -03:00 [WRN] No store type was specified for the decimal property 'Taxa' on entity type 'Transferencia'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-30 09:41:04.715 -03:00 [WRN] No store type was specified for the decimal property 'Valor' on entity type 'Transferencia'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-30 09:41:07.108 -03:00 [INF] BMPTec API started successfully
+2025-12-30 09:41:20.312 -03:00 [WRN] Failed to determine the https port for redirect.
+2025-12-30 09:41:29.311 -03:00 [INF] Iniciando transferência da conta de id "2aeecc2d-aa39-4537-d4f8-08de47936718" para conta de id "e9e1fa2f-cf86-4be1-d4f7-08de47936718"
+2025-12-30 09:41:37.864 -03:00 [INF] Buscando feriados nacionais para o ano 2025
+2025-12-30 09:42:04.876 -03:00 [INF] Carregados 13 feriados para o ano 2025
+2025-12-30 09:42:19.242 -03:00 [INF] Transferência realizada com sucesso: "498e30e6-6d99-4e36-72f4-08de47a0ded1"

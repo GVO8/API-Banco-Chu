@@ -1,0 +1,159 @@
+2025-12-31 00:52:07.234 -03:00 [INF] Starting BMPTec API...
+2025-12-31 00:52:09.828 -03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-12-31 00:52:09.919 -03:00 [WRN] No store type was specified for the decimal property 'Saldo' on entity type 'Conta'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-31 00:52:09.928 -03:00 [WRN] No store type was specified for the decimal property 'Taxa' on entity type 'Transferencia'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-31 00:52:09.928 -03:00 [WRN] No store type was specified for the decimal property 'Valor' on entity type 'Transferencia'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-31 00:52:11.111 -03:00 [INF] BMPTec API started successfully
+2025-12-31 00:52:37.597 -03:00 [WRN] Failed to determine the https port for redirect.
+2025-12-31 00:52:41.839 -03:00 [INF] Iniciando geração de extrato para conta "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+2025-12-31 00:52:42.976 -03:00 [ERR] Erro ao gerar extrato
+System.Collections.Generic.KeyNotFoundException: Conta não encontrada ou inativa
+   at BMPTec.Infrastructure.Services.ExtratoService.GerarExtratoAsync(ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Infrastructure\Services\ExtratoService.cs:line 41
+2025-12-31 00:52:43.135 -03:00 [ERR] Erro no serviço de aplicação
+System.Collections.Generic.KeyNotFoundException: Conta não encontrada ou inativa
+   at BMPTec.Infrastructure.Services.ExtratoService.GerarExtratoAsync(ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Infrastructure\Services\ExtratoService.cs:line 41
+   at BMPTec.Application.Services.ExtratoAppService.GerarExtratoAsync(ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Application\Services\ExtratoAppService.cs:line 35
+2025-12-31 00:52:43.288 -03:00 [ERR] Erro ao gerar extrato
+System.Collections.Generic.KeyNotFoundException: Conta não encontrada ou inativa
+   at BMPTec.Infrastructure.Services.ExtratoService.GerarExtratoAsync(ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Infrastructure\Services\ExtratoService.cs:line 41
+   at BMPTec.Application.Services.ExtratoAppService.GerarExtratoAsync(ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Application\Services\ExtratoAppService.cs:line 35
+   at BMPTec.API.Controllers.v1.ExtratoController.GerarExtrato(ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Api\Controllers\ExtratoController.cs:line 35
+2025-12-31 00:53:11.537 -03:00 [INF] Iniciando geração de extrato para conta "2aeecc2d-aa39-4537-d4f8-08de47936718"
+2025-12-31 00:53:11.641 -03:00 [ERR] Erro no serviço de aplicação
+System.InvalidOperationException: Período máximo para extrato é 90 dias
+   at BMPTec.Application.Services.ExtratoAppService.ValidarRegrasNegocioAsync(ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Application\Services\ExtratoAppService.cs:line 59
+   at BMPTec.Application.Services.ExtratoAppService.GerarExtratoAsync(ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Application\Services\ExtratoAppService.cs:line 32
+2025-12-31 00:53:11.769 -03:00 [ERR] Erro ao gerar extrato
+System.InvalidOperationException: Período máximo para extrato é 90 dias
+   at BMPTec.Application.Services.ExtratoAppService.ValidarRegrasNegocioAsync(ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Application\Services\ExtratoAppService.cs:line 59
+   at BMPTec.Application.Services.ExtratoAppService.GerarExtratoAsync(ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Application\Services\ExtratoAppService.cs:line 32
+   at BMPTec.API.Controllers.v1.ExtratoController.GerarExtrato(ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Api\Controllers\ExtratoController.cs:line 35
+2025-12-31 00:54:49.979 -03:00 [INF] Iniciando geração de extrato para conta "2aeecc2d-aa39-4537-d4f8-08de47936718"
+2025-12-31 00:54:50.686 -03:00 [ERR] Erro ao gerar extrato
+System.InvalidOperationException: Sequence contains no elements
+   at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.Max[TSource](IEnumerable`1 source, Func`2 selector)
+   at BMPTec.Infrastructure.Services.ExtratoService.GerarResumoAsync(List`1 lancamentos, ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Infrastructure\Services\ExtratoService.cs:line 223
+   at BMPTec.Infrastructure.Services.ExtratoService.GerarExtratoAsync(ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Infrastructure\Services\ExtratoService.cs:line 71
+2025-12-31 00:54:50.802 -03:00 [ERR] Erro no serviço de aplicação
+System.InvalidOperationException: Sequence contains no elements
+   at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.Max[TSource](IEnumerable`1 source, Func`2 selector)
+   at BMPTec.Infrastructure.Services.ExtratoService.GerarResumoAsync(List`1 lancamentos, ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Infrastructure\Services\ExtratoService.cs:line 223
+   at BMPTec.Infrastructure.Services.ExtratoService.GerarExtratoAsync(ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Infrastructure\Services\ExtratoService.cs:line 71
+   at BMPTec.Application.Services.ExtratoAppService.GerarExtratoAsync(ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Application\Services\ExtratoAppService.cs:line 35
+2025-12-31 00:54:50.944 -03:00 [ERR] Erro ao gerar extrato
+System.InvalidOperationException: Sequence contains no elements
+   at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.Max[TSource](IEnumerable`1 source, Func`2 selector)
+   at BMPTec.Infrastructure.Services.ExtratoService.GerarResumoAsync(List`1 lancamentos, ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Infrastructure\Services\ExtratoService.cs:line 223
+   at BMPTec.Infrastructure.Services.ExtratoService.GerarExtratoAsync(ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Infrastructure\Services\ExtratoService.cs:line 71
+   at BMPTec.Application.Services.ExtratoAppService.GerarExtratoAsync(ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Application\Services\ExtratoAppService.cs:line 35
+   at BMPTec.API.Controllers.v1.ExtratoController.GerarExtrato(ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Api\Controllers\ExtratoController.cs:line 35
+2025-12-31 00:55:00.204 -03:00 [INF] Iniciando geração de extrato para conta "2aeecc2d-aa39-4537-d4f8-08de47936718"
+2025-12-31 00:55:00.355 -03:00 [ERR] Erro ao gerar extrato
+System.InvalidOperationException: Sequence contains no elements
+   at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.Max[TSource](IEnumerable`1 source, Func`2 selector)
+   at BMPTec.Infrastructure.Services.ExtratoService.GerarResumoAsync(List`1 lancamentos, ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Infrastructure\Services\ExtratoService.cs:line 223
+   at BMPTec.Infrastructure.Services.ExtratoService.GerarExtratoAsync(ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Infrastructure\Services\ExtratoService.cs:line 71
+2025-12-31 00:55:00.565 -03:00 [ERR] Erro no serviço de aplicação
+System.InvalidOperationException: Sequence contains no elements
+   at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.Max[TSource](IEnumerable`1 source, Func`2 selector)
+   at BMPTec.Infrastructure.Services.ExtratoService.GerarResumoAsync(List`1 lancamentos, ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Infrastructure\Services\ExtratoService.cs:line 223
+   at BMPTec.Infrastructure.Services.ExtratoService.GerarExtratoAsync(ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Infrastructure\Services\ExtratoService.cs:line 71
+   at BMPTec.Application.Services.ExtratoAppService.GerarExtratoAsync(ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Application\Services\ExtratoAppService.cs:line 35
+2025-12-31 00:55:00.731 -03:00 [ERR] Erro ao gerar extrato
+System.InvalidOperationException: Sequence contains no elements
+   at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.Max[TSource](IEnumerable`1 source, Func`2 selector)
+   at BMPTec.Infrastructure.Services.ExtratoService.GerarResumoAsync(List`1 lancamentos, ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Infrastructure\Services\ExtratoService.cs:line 223
+   at BMPTec.Infrastructure.Services.ExtratoService.GerarExtratoAsync(ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Infrastructure\Services\ExtratoService.cs:line 71
+   at BMPTec.Application.Services.ExtratoAppService.GerarExtratoAsync(ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Application\Services\ExtratoAppService.cs:line 35
+   at BMPTec.API.Controllers.v1.ExtratoController.GerarExtrato(ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Api\Controllers\ExtratoController.cs:line 35
+2025-12-31 00:55:42.521 -03:00 [INF] Iniciando geração de extrato para conta "2aeecc2d-aa39-4537-d4f8-08de47936718"
+2025-12-31 00:55:53.231 -03:00 [ERR] Erro ao gerar extrato
+System.InvalidOperationException: Sequence contains no elements
+   at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.Max[TSource](IEnumerable`1 source, Func`2 selector)
+   at BMPTec.Infrastructure.Services.ExtratoService.GerarResumoAsync(List`1 lancamentos, ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Infrastructure\Services\ExtratoService.cs:line 223
+   at BMPTec.Infrastructure.Services.ExtratoService.GerarExtratoAsync(ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Infrastructure\Services\ExtratoService.cs:line 71
+2025-12-31 00:56:07.274 -03:00 [ERR] Erro no serviço de aplicação
+System.InvalidOperationException: Sequence contains no elements
+   at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.Max[TSource](IEnumerable`1 source, Func`2 selector)
+   at BMPTec.Infrastructure.Services.ExtratoService.GerarResumoAsync(List`1 lancamentos, ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Infrastructure\Services\ExtratoService.cs:line 223
+   at BMPTec.Infrastructure.Services.ExtratoService.GerarExtratoAsync(ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Infrastructure\Services\ExtratoService.cs:line 71
+   at BMPTec.Application.Services.ExtratoAppService.GerarExtratoAsync(ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Application\Services\ExtratoAppService.cs:line 35
+2025-12-31 00:56:07.451 -03:00 [ERR] Erro ao gerar extrato
+System.InvalidOperationException: Sequence contains no elements
+   at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.Max[TSource](IEnumerable`1 source, Func`2 selector)
+   at BMPTec.Infrastructure.Services.ExtratoService.GerarResumoAsync(List`1 lancamentos, ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Infrastructure\Services\ExtratoService.cs:line 223
+   at BMPTec.Infrastructure.Services.ExtratoService.GerarExtratoAsync(ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Infrastructure\Services\ExtratoService.cs:line 71
+   at BMPTec.Application.Services.ExtratoAppService.GerarExtratoAsync(ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Application\Services\ExtratoAppService.cs:line 35
+   at BMPTec.API.Controllers.v1.ExtratoController.GerarExtrato(ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Api\Controllers\ExtratoController.cs:line 35
+2025-12-31 00:56:14.340 -03:00 [INF] Iniciando geração de extrato para conta "2aeecc2d-aa39-4537-d4f8-08de47936718"
+2025-12-31 00:56:41.772 -03:00 [ERR] Erro ao gerar extrato
+System.InvalidOperationException: Sequence contains no elements
+   at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.Max[TSource](IEnumerable`1 source, Func`2 selector)
+   at BMPTec.Infrastructure.Services.ExtratoService.GerarResumoAsync(List`1 lancamentos, ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Infrastructure\Services\ExtratoService.cs:line 223
+   at BMPTec.Infrastructure.Services.ExtratoService.GerarExtratoAsync(ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Infrastructure\Services\ExtratoService.cs:line 71
+2025-12-31 00:56:41.966 -03:00 [ERR] Erro no serviço de aplicação
+System.InvalidOperationException: Sequence contains no elements
+   at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.Max[TSource](IEnumerable`1 source, Func`2 selector)
+   at BMPTec.Infrastructure.Services.ExtratoService.GerarResumoAsync(List`1 lancamentos, ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Infrastructure\Services\ExtratoService.cs:line 223
+   at BMPTec.Infrastructure.Services.ExtratoService.GerarExtratoAsync(ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Infrastructure\Services\ExtratoService.cs:line 71
+   at BMPTec.Application.Services.ExtratoAppService.GerarExtratoAsync(ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Application\Services\ExtratoAppService.cs:line 35
+2025-12-31 00:56:42.131 -03:00 [ERR] Erro ao gerar extrato
+System.InvalidOperationException: Sequence contains no elements
+   at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.Max[TSource](IEnumerable`1 source, Func`2 selector)
+   at BMPTec.Infrastructure.Services.ExtratoService.GerarResumoAsync(List`1 lancamentos, ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Infrastructure\Services\ExtratoService.cs:line 223
+   at BMPTec.Infrastructure.Services.ExtratoService.GerarExtratoAsync(ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Infrastructure\Services\ExtratoService.cs:line 71
+   at BMPTec.Application.Services.ExtratoAppService.GerarExtratoAsync(ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Application\Services\ExtratoAppService.cs:line 35
+   at BMPTec.API.Controllers.v1.ExtratoController.GerarExtrato(ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Api\Controllers\ExtratoController.cs:line 35
+2025-12-31 00:56:54.519 -03:00 [INF] Iniciando geração de extrato para conta "2aeecc2d-aa39-4537-d4f8-08de47936718"
+2025-12-31 00:58:01.651 -03:00 [ERR] Erro ao gerar extrato
+System.InvalidOperationException: Sequence contains no elements
+   at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.Max[TSource](IEnumerable`1 source, Func`2 selector)
+   at BMPTec.Infrastructure.Services.ExtratoService.GerarResumoAsync(List`1 lancamentos, ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Infrastructure\Services\ExtratoService.cs:line 223
+   at BMPTec.Infrastructure.Services.ExtratoService.GerarExtratoAsync(ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Infrastructure\Services\ExtratoService.cs:line 71
+2025-12-31 00:58:01.940 -03:00 [ERR] Erro no serviço de aplicação
+System.InvalidOperationException: Sequence contains no elements
+   at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.Max[TSource](IEnumerable`1 source, Func`2 selector)
+   at BMPTec.Infrastructure.Services.ExtratoService.GerarResumoAsync(List`1 lancamentos, ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Infrastructure\Services\ExtratoService.cs:line 223
+   at BMPTec.Infrastructure.Services.ExtratoService.GerarExtratoAsync(ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Infrastructure\Services\ExtratoService.cs:line 71
+   at BMPTec.Application.Services.ExtratoAppService.GerarExtratoAsync(ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Application\Services\ExtratoAppService.cs:line 35
+2025-12-31 00:58:02.329 -03:00 [ERR] Erro ao gerar extrato
+System.InvalidOperationException: Sequence contains no elements
+   at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.Max[TSource](IEnumerable`1 source, Func`2 selector)
+   at BMPTec.Infrastructure.Services.ExtratoService.GerarResumoAsync(List`1 lancamentos, ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Infrastructure\Services\ExtratoService.cs:line 223
+   at BMPTec.Infrastructure.Services.ExtratoService.GerarExtratoAsync(ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Infrastructure\Services\ExtratoService.cs:line 71
+   at BMPTec.Application.Services.ExtratoAppService.GerarExtratoAsync(ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Application\Services\ExtratoAppService.cs:line 35
+   at BMPTec.API.Controllers.v1.ExtratoController.GerarExtrato(ExtratoRequest request) in C:\dev\programacao\API-Banco-Chu\BMPTec.Api\Controllers\ExtratoController.cs:line 35
+2025-12-31 00:58:13.125 -03:00 [INF] Iniciando geração de extrato para conta "2aeecc2d-aa39-4537-d4f8-08de47936718"
+2025-12-31 01:03:47.931 -03:00 [INF] Starting BMPTec API...
+2025-12-31 01:03:49.969 -03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-12-31 01:03:50.039 -03:00 [WRN] No store type was specified for the decimal property 'Saldo' on entity type 'Conta'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-31 01:03:50.045 -03:00 [WRN] No store type was specified for the decimal property 'Taxa' on entity type 'Transferencia'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-31 01:03:50.045 -03:00 [WRN] No store type was specified for the decimal property 'Valor' on entity type 'Transferencia'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-31 01:03:50.964 -03:00 [INF] BMPTec API started successfully
+2025-12-31 01:04:07.067 -03:00 [WRN] Failed to determine the https port for redirect.
+2025-12-31 01:04:10.433 -03:00 [INF] Iniciando geração de extrato para conta "2aeecc2d-aa39-4537-d4f8-08de47936718"
+2025-12-31 01:04:26.439 -03:00 [INF] Extrato gerado para conta "2aeecc2d-aa39-4537-d4f8-08de47936718" no período "2025-11-01T03:50:44.3540000Z" a "2025-12-31T03:50:44.3540000Z"
+2025-12-31 01:04:30.379 -03:00 [INF] Extrato gerado com 3 transações
+2025-12-31 01:05:04.192 -03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
